@@ -1,0 +1,5 @@
+spring:
+  config:
+    name: group-buy-market-fzzf-app
+  profiles:
+    active: dev
