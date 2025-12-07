@@ -17,13 +17,18 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GroupBuyActivity {
-
     /** 自增 */
     private Long id;
     /** 活动ID */
     private Long activityId;
     /** 活动名称 */
     private String activityName;
+    /** 来源 */
+    private String source;
+    /** 渠道 */
+    private String channel;
+    /** 商品ID */
+    private String goodsId;
     /** 折扣ID */
     private String discountId;
     /** 拼团方式（0自动成团、1达成目标拼团） */
@@ -48,9 +53,5 @@ public class GroupBuyActivity {
     private Date createTime;
     /** 更新时间 */
     private Date updateTime;
-
-    public static String cacheRedisKey(Long activityId) {
-        return "group_buy_market_cn.bugstack.infrastructure.dao.po.GroupBuyActivity_" + activityId;
-    }
 
 }

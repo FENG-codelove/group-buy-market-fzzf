@@ -1,5 +1,6 @@
 package cn.bugstack.infrastructure.dao;
 
+import cn.bugstack.infrastructure.dao.po.GroupBuyActivity;
 import cn.bugstack.infrastructure.dao.po.GroupBuyDiscount;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -15,6 +16,7 @@ public interface IGroupBuyDiscountDao {
 
     List<GroupBuyDiscount> queryGroupBuyDiscountList();
 
+    GroupBuyDiscount queryGroupBuyActivityDiscountByDiscountId(String discountId);
 
 
 }

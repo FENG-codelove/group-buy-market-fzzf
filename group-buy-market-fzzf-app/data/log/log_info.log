@@ -1,14 +1,8 @@
-25-12-06.18:14:26.810 [main            ] INFO  GroupBuyAcivityDaoTest - Starting GroupBuyAcivityDaoTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 14548 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
-25-12-06.18:14:26.811 [main            ] INFO  GroupBuyAcivityDaoTest - The following 1 profile is active: "dev"
-25-12-06.18:14:29.081 [main            ] INFO  GroupBuyAcivityDaoTest - Started GroupBuyAcivityDaoTest in 2.813 seconds (JVM running for 3.761)
-25-12-06.18:17:58.131 [main            ] INFO  GroupBuyActivityDaoTest - Starting GroupBuyActivityDaoTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 26984 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
-25-12-06.18:17:58.132 [main            ] INFO  GroupBuyActivityDaoTest - The following 1 profile is active: "dev"
-25-12-06.18:18:00.124 [main            ] INFO  GroupBuyActivityDaoTest - Started GroupBuyActivityDaoTest in 2.354 seconds (JVM running for 3.078)
-25-12-06.18:24:13.523 [main            ] INFO  GroupBuyActivityDaoTest - Starting GroupBuyActivityDaoTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 22616 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
-25-12-06.18:24:13.524 [main            ] INFO  GroupBuyActivityDaoTest - The following 1 profile is active: "dev"
-25-12-06.18:24:15.395 [main            ] INFO  GroupBuyActivityDaoTest - Started GroupBuyActivityDaoTest in 2.21 seconds (JVM running for 2.92)
-25-12-06.18:24:15.583 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-25-12-06.18:24:17.582 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-25-12-06.18:24:17.822 [main            ] INFO  GroupBuyActivityDaoTest - 测试结果：[{"activityId":100123,"activityName":"测试活动","createTime":"2024-12-07 10:19:40","discountId":"25120207","endTime":"2029-12-07 10:19:40","groupType":0,"id":1,"startTime":"2024-12-07 10:19:40","status":1,"tagId":"1","tagScope":"1","takeLimitCount":1,"target":3,"updateTime":"2025-04-05 11:21:03","validTime":15}]
-25-12-06.18:24:17.831 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-25-12-06.18:24:17.846 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-12-07.19:22:42.161 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 21708 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-07.19:22:42.163 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-07.19:22:44.632 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.007 seconds (JVM running for 3.913)
+25-12-07.19:27:41.974 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 19204 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-07.19:27:41.976 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-07.19:27:44.322 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 2.748 seconds (JVM running for 3.496)
+25-12-07.19:27:44.711 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-07.19:27:44.712 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
