@@ -61,7 +61,6 @@ public class ActivityRepository implements IActivityRepository{
                 .tagId(groupBuyActivityRes.getTagId())
                 .tagScope(groupBuyActivityRes.getTagScope())
                 .build();
-
     }
 
     @Override

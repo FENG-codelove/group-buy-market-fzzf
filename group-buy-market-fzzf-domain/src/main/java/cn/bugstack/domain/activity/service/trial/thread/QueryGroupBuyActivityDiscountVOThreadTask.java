@@ -11,9 +11,9 @@ public class QueryGroupBuyActivityDiscountVOThreadTask implements Callable<Group
     private final String channel;
     private IActivityRepository repository;
 
-    public QueryGroupBuyActivityDiscountVOThreadTask(String source, String chanel, IActivityRepository repository) {
+    public QueryGroupBuyActivityDiscountVOThreadTask(String source, String channel, IActivityRepository repository) {
         this.source = source;
-        this.channel = chanel;
+        this.channel = channel;
         this.repository = repository;
     }
 
