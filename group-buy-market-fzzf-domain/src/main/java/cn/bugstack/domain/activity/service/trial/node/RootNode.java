@@ -33,6 +33,7 @@ private SwitchRoot switchRoot;
         throw  new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(),ResponseCode.ILLEGAL_PARAMETER.getInfo());
         }
 
-        return null;
+        return router(requestParameter,dynamicContext);
+
     }
 }

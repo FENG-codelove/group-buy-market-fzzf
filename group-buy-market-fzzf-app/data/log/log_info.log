@@ -1,8 +1,47 @@
-25-12-07.19:22:42.161 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 21708 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
-25-12-07.19:22:42.163 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-12-07.19:22:44.632 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.007 seconds (JVM running for 3.913)
-25-12-07.19:27:41.974 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 19204 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
-25-12-07.19:27:41.976 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
-25-12-07.19:27:44.322 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 2.748 seconds (JVM running for 3.496)
-25-12-07.19:27:44.711 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
-25-12-07.19:27:44.712 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
+25-12-08.09:38:14.926 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 30336 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.09:38:14.927 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.09:38:26.981 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 12.715 seconds (JVM running for 14.583)
+25-12-08.09:38:28.653 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.09:38:28.656 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
+25-12-08.09:49:09.766 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 2100 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.09:49:09.768 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.09:49:23.964 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 15.001 seconds (JVM running for 16.391)
+25-12-08.09:51:52.625 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.09:51:52.630 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
+25-12-08.10:01:04.493 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 27368 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.10:01:04.494 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.10:01:07.354 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.421 seconds (JVM running for 4.479)
+25-12-08.10:01:07.827 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.10:01:07.829 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
+25-12-08.10:03:40.559 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 10460 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.10:03:40.562 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.10:03:54.171 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 14.171 seconds (JVM running for 15.439)
+25-12-08.10:04:02.786 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.10:04:02.791 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
+25-12-08.10:16:26.539 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 12592 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.10:16:26.540 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.10:16:29.288 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.205 seconds (JVM running for 4.225)
+25-12-08.10:16:29.807 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.10:16:29.809 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
+25-12-08.10:22:33.561 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 14064 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.10:22:33.562 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.10:22:36.357 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.297 seconds (JVM running for 4.269)
+25-12-08.10:22:36.821 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.10:22:36.823 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:null
+25-12-08.10:30:48.815 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 16360 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.10:30:48.816 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.10:30:52.073 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.864 seconds (JVM running for 5.011)
+25-12-08.10:30:52.404 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-12-08.10:30:55.630 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-12-08.10:30:55.775 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-12-08.10:30:55.795 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+25-12-08.10:44:30.103 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Starting IIndexGroupBuyMarketServiceTest using Java 1.8.0_152 on LAPTOP-N9AGQF5E with PID 26980 (started by fengzhe in C:\RUANJIAN\JAVA-Two\group-buy-market-fzzf\group-buy-market-fzzf-app)
+25-12-08.10:44:30.105 [main            ] INFO  IIndexGroupBuyMarketServiceTest - The following 1 profile is active: "dev"
+25-12-08.10:44:32.958 [main            ] INFO  IIndexGroupBuyMarketServiceTest - Started IIndexGroupBuyMarketServiceTest in 3.325 seconds (JVM running for 4.275)
+25-12-08.10:44:33.265 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+25-12-08.10:44:36.023 [pool-2-thread-2 ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+25-12-08.10:44:36.291 [main            ] INFO  EndNode                - 拼团商品查询试算服务-EndNode userId:xiaofuge requestParameter:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.10:44:36.293 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 请求参数:{"channel":"c01","goodsId":"9890001","source":"s01","userId":"xiaofuge"}
+25-12-08.10:44:36.303 [main            ] INFO  IIndexGroupBuyMarketServiceTest - 返回结果:{"deductionPrice":0.00,"endTime":1733537980000,"goodsId":"9890001","goodsName":"《手写MyBatis：渐进式源码实践》","isEnable":false,"isVisible":false,"originalPrice":100.00,"startTime":1733537980000,"targetCount":1}
+25-12-08.10:44:36.315 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+25-12-08.10:44:36.326 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

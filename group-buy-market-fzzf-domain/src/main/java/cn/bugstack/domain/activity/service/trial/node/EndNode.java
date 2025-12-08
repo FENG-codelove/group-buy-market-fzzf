@@ -7,6 +7,7 @@ import cn.bugstack.domain.activity.model.valobj.SkuVO;
 import cn.bugstack.domain.activity.service.trial.AbstractGroupBuyMarketSupport;
 import cn.bugstack.domain.activity.service.trial.factory.DefaultActivityStrategyFactory;
 import cn.bugstack.types.design.framework.tree.StrategyHandler;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -17,9 +18,12 @@ import java.math.BigDecimal;
 public class EndNode extends AbstractGroupBuyMarketSupport<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> {
     @Override
     public TrialBalanceEntity doApply(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
-        GroupBuyActivityDiscountVO groupBuyActivityDiscountVO =dynamicContext.getGroupBuyActivityDiscountVO();
+        log.info("拼团商品查询试算服务-EndNode userId:{} requestParameter:{}", requestParameter.getUserId(), JSON.toJSONString(requestParameter));
+
+        GroupBuyActivityDiscountVO groupBuyActivityDiscountVO = dynamicContext.getGroupBuyActivityDiscountVO();
         SkuVO skuVO = dynamicContext.getSkuVO();
 
+        // 返回空结果
         return TrialBalanceEntity.builder()
                 .goodsId(skuVO.getGoodsId())
                 .goodsName(skuVO.getGoodsName())
@@ -31,11 +35,11 @@ public class EndNode extends AbstractGroupBuyMarketSupport<MarketProductEntity, 
                 .isVisible(false)
                 .isEnable(false)
                 .build();
-
     }
 
     @Override
     public StrategyHandler<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> get(MarketProductEntity requestParameter, DefaultActivityStrategyFactory.DynamicContext dynamicContext) throws Exception {
         return defaultStrategyHandler;
     }
+
 }
