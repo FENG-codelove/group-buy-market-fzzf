@@ -1,17 +1,26 @@
 package cn.bugstack.domain.activity.model.valobj;
 
+import cn.bugstack.types.common.Constants;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
+import java.util.Objects;
 
-@Data
+/**
+ * 
+ * @description 拼团活动营销配置值对象
+ * @create 2024-12-21 09:39
+ */
+@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class GroupBuyActivityDiscountVO {
+
     /**
      * 活动ID
      */
@@ -77,7 +86,29 @@ public class GroupBuyActivityDiscountVO {
      * 可见限制
      * 只要存在这样一个值，那么首次获得的默认值就是 false
      */
-    @Data
+    public boolean isVisible() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
+        String[] split = this.tagScope.split(Constants.SPLIT);
+        if (split.length > 0 && Objects.equals(split[0], "1") && StringUtils.isNotBlank(split[0])) {
+            return TagScopeEnumVO.VISIBLE.getRefuse();
+        }
+        return TagScopeEnumVO.VISIBLE.getAllow();
+    }
+
+    /**
+     * 参与限制
+     * 只要存在这样一个值，那么首次获得的默认值就是 false
+     */
+    public boolean isEnable() {
+        if(StringUtils.isBlank(this.tagScope)) return TagScopeEnumVO.VISIBLE.getAllow();
+        String[] split = this.tagScope.split(Constants.SPLIT);
+        if (split.length == 2 && Objects.equals(split[1], "2") && StringUtils.isNotBlank(split[1])) {
+            return TagScopeEnumVO.ENABLE.getRefuse();
+        }
+        return TagScopeEnumVO.ENABLE.getAllow();
+    }
+
+    @Getter
     @Builder
     @AllArgsConstructor
     @NoArgsConstructor
@@ -111,6 +142,6 @@ public class GroupBuyActivityDiscountVO {
          * 人群标签，特定优惠限定
          */
         private String tagId;
-
     }
+
 }

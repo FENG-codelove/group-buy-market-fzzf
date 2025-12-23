@@ -8,20 +8,23 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+/**
+ * 
+ * @description 首页营销服务
+ * @create 2024-12-14 14:33
+ */
 @Service
 public class IndexGroupBuyMarketServiceImpl implements IIndexGroupBuyMarketService {
+
     @Resource
     private DefaultActivityStrategyFactory defaultActivityStrategyFactory;
 
     @Override
     public TrialBalanceEntity indexMarketTrial(MarketProductEntity marketProductEntity) throws Exception {
-        StrategyHandler<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext,TrialBalanceEntity> strategyHandler =defaultActivityStrategyFactory.strategyHandler();
-
-        TrialBalanceEntity trialBalanceEntity = strategyHandler.apply(marketProductEntity,new DefaultActivityStrategyFactory.DynamicContext());
-
-
-        return trialBalanceEntity;
-
-
+        // 获取执行策略
+        StrategyHandler<MarketProductEntity, DefaultActivityStrategyFactory.DynamicContext, TrialBalanceEntity> strategyHandler = defaultActivityStrategyFactory.strategyHandler();
+        // 受理试算操作
+        return strategyHandler.apply(marketProductEntity, new DefaultActivityStrategyFactory.DynamicContext());
     }
+
 }

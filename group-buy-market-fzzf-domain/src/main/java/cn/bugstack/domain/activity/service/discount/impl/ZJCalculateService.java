@@ -7,9 +7,15 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+/**
+ * 
+ * @description 直减
+ * @create 2024-12-22 09:24
+ */
 @Slf4j
 @Service("ZJ")
 public class ZJCalculateService extends AbstractDiscountCalculateService {
+
     @Override
     public BigDecimal doCalculate(BigDecimal originalPrice, GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount) {
         log.info("优惠策略折扣计算:{}", groupBuyDiscount.getDiscountType().getCode());

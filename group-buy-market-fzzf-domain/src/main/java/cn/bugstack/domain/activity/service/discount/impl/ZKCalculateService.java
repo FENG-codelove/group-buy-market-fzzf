@@ -7,6 +7,11 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+/**
+ * 
+ * @description 折扣优惠计算
+ * @create 2024-12-22 12:12
+ */
 @Slf4j
 @Service("ZK")
 public class ZKCalculateService extends AbstractDiscountCalculateService {
@@ -28,6 +33,5 @@ public class ZKCalculateService extends AbstractDiscountCalculateService {
 
         return deductionPrice;
     }
-
 
 }

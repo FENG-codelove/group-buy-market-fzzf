@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * @author
+ * 
  * @description 折扣配置
- * @create
+ * @create 2024-12-07 10:06
  */
 @Data
 @Builder
@@ -26,7 +26,7 @@ public class GroupBuyDiscount {
     /**
      * 折扣ID
      */
-    private String discountId;
+    private Integer discountId;
 
     /**
      * 折扣标题
@@ -67,9 +67,5 @@ public class GroupBuyDiscount {
      * 更新时间
      */
     private Date updateTime;
-
-    public static String cacheRedisKey(String discountId) {
-        return "group_buy_market_cn.bugstack.infrastructure.dao.po.GroupBuyDiscount_" + discountId;
-    }
 
 }

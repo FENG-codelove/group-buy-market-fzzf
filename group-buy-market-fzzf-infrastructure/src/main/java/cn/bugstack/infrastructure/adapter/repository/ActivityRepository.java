@@ -3,19 +3,30 @@ package cn.bugstack.infrastructure.adapter.repository;
 import cn.bugstack.domain.activity.adapter.repository.IActivityRepository;
 import cn.bugstack.domain.activity.model.valobj.DiscountTypeEnum;
 import cn.bugstack.domain.activity.model.valobj.GroupBuyActivityDiscountVO;
+import cn.bugstack.domain.activity.model.valobj.SCSkuActivityVO;
 import cn.bugstack.domain.activity.model.valobj.SkuVO;
 import cn.bugstack.infrastructure.dao.IGroupBuyActivityDao;
 import cn.bugstack.infrastructure.dao.IGroupBuyDiscountDao;
+import cn.bugstack.infrastructure.dao.ISCSkuActivityDao;
 import cn.bugstack.infrastructure.dao.ISkuDao;
 import cn.bugstack.infrastructure.dao.po.GroupBuyActivity;
 import cn.bugstack.infrastructure.dao.po.GroupBuyDiscount;
+import cn.bugstack.infrastructure.dao.po.SCSkuActivity;
 import cn.bugstack.infrastructure.dao.po.Sku;
+import cn.bugstack.infrastructure.dcc.DCCService;
+import cn.bugstack.infrastructure.redis.IRedisService;
+import org.redisson.api.RBitSet;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
 
+/**
+ * 
+ * @description 活动仓储
+ * @create 2024-12-21 10:10
+ */
 @Repository
-public class ActivityRepository implements IActivityRepository{
+public class ActivityRepository implements IActivityRepository {
 
     @Resource
     private IGroupBuyActivityDao groupBuyActivityDao;
@@ -23,18 +34,22 @@ public class ActivityRepository implements IActivityRepository{
     private IGroupBuyDiscountDao groupBuyDiscountDao;
     @Resource
     private ISkuDao skuDao;
+    @Resource
+    private ISCSkuActivityDao skuActivityDao;
+    @Resource
+    private IRedisService redisService;
+    @Resource
+    private DCCService dccService;
 
     @Override
-    public GroupBuyActivityDiscountVO queryGroupBuyActivityDiscountVO(String source, String channel) {
-        GroupBuyActivity groupBuyActivityReq = new GroupBuyActivity();
-        groupBuyActivityReq.setSource(source);
-        groupBuyActivityReq.setChannel(channel);
-        GroupBuyActivity groupBuyActivityRes = groupBuyActivityDao.queryValidGroupBuyActivity(groupBuyActivityReq);
+    public GroupBuyActivityDiscountVO queryGroupBuyActivityDiscountVO(Long activityId) {
+        GroupBuyActivity groupBuyActivityRes = groupBuyActivityDao.queryValidGroupBuyActivityId(activityId);
+        if (null == groupBuyActivityRes) return null;
 
         String discountId = groupBuyActivityRes.getDiscountId();
 
         GroupBuyDiscount groupBuyDiscountRes = groupBuyDiscountDao.queryGroupBuyActivityDiscountByDiscountId(discountId);
-
+        if (null == groupBuyDiscountRes) return null;
 
         GroupBuyActivityDiscountVO.GroupBuyDiscount groupBuyDiscount = GroupBuyActivityDiscountVO.GroupBuyDiscount.builder()
                 .discountName(groupBuyDiscountRes.getDiscountName())
@@ -48,9 +63,6 @@ public class ActivityRepository implements IActivityRepository{
         return GroupBuyActivityDiscountVO.builder()
                 .activityId(groupBuyActivityRes.getActivityId())
                 .activityName(groupBuyActivityRes.getActivityName())
-                .source(groupBuyActivityRes.getSource())
-                .channel(groupBuyActivityRes.getChannel())
-                .goodsId(groupBuyActivityRes.getGoodsId())
                 .groupBuyDiscount(groupBuyDiscount)
                 .groupType(groupBuyActivityRes.getGroupType())
                 .takeLimitCount(groupBuyActivityRes.getTakeLimitCount())
@@ -67,10 +79,48 @@ public class ActivityRepository implements IActivityRepository{
     @Override
     public SkuVO querySkuByGoodsId(String goodsId) {
         Sku sku = skuDao.querySkuByGoodsId(goodsId);
+        if (null == sku) return null;
         return SkuVO.builder()
                 .goodsId(sku.getGoodsId())
                 .goodsName(sku.getGoodsName())
                 .originalPrice(sku.getOriginalPrice())
                 .build();
     }
+
+    @Override
+    public SCSkuActivityVO querySCSkuActivityBySCGoodsId(String source, String channel, String goodsId) {
+        SCSkuActivity scSkuActivityReq = new SCSkuActivity();
+        scSkuActivityReq.setSource(source);
+        scSkuActivityReq.setChannel(channel);
+        scSkuActivityReq.setGoodsId(goodsId);
+
+        SCSkuActivity scSkuActivity = skuActivityDao.querySCSkuActivityBySCGoodsId(scSkuActivityReq);
+        if (null == scSkuActivity) return null;
+
+        return SCSkuActivityVO.builder()
+                .source(scSkuActivity.getSource())
+                .chanel(scSkuActivity.getChannel())
+                .activityId(scSkuActivity.getActivityId())
+                .goodsId(scSkuActivity.getGoodsId())
+                .build();
+    }
+
+    @Override
+    public boolean isTagCrowdRange(String tagId, String userId) {
+        RBitSet bitSet = redisService.getBitSet(tagId);
+        if (!bitSet.isExists()) return true;
+        // 判断用户是否存在人群中
+        return bitSet.get(redisService.getIndexFromUserId(userId));
+    }
+
+    @Override
+    public boolean downgradeSwitch() {
+        return dccService.isDowngradeSwitch();
+    }
+
+    @Override
+    public boolean cutRange(String userId) {
+        return dccService.isCutRange(userId);
+    }
+
 }
